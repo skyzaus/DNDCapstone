@@ -6,12 +6,13 @@ function NavigationBar({ username }) {
   return (
     <div className="navbar">
       <div>
-      
-        <NavLink to="/">Home</NavLink>{/* todo */}
-        <NavLink to="/character1">NPC Generator</NavLink> {/* todo */}
-        <NavLink to="/DiceRoller">Dice</NavLink>{/* todo */}
-        <NavLink to="/LootGenerator">Gold Generator</NavLink>{/* todo */}
-        <NavLink to="/StoryGenerator">Story Generator</NavLink>{/* todo */}
+      <ul>
+        <li><NavLink to="/">Home</NavLink>{/* todo */}</li>
+        <li> <NavLink to="/character1">NPC Generator</NavLink> {/* todo */}</li>
+        <li><NavLink to="/DiceRoller">Dice</NavLink>{/* todo */}</li>
+        <li> <NavLink to="/LootGenerator">Gold Generator</NavLink>{/* todo */}</li>
+        <li><NavLink to="/StoryGenerator">Story Generator</NavLink>{/* todo */}</li>
+        </ul>
       </div>
       <div>
         {username && <span className="welcome-message">Welcome, {username}</span>}
