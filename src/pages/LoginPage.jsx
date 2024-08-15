@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
-
+import { ThemeContext } from '../context/ThemeContext'; // Import your ThemeContext
 import styles from './LoginPage.module.css';
-import { ThemeContext } from '../../context/ThemeContext';
 
 const LoginPage = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -15,7 +14,6 @@ const LoginPage = ({ onLogin }) => {
   };
 
   return (
-    
     <div className={`${styles['login-container']} ${isDarkMode ? 'dark-mode' : ''}`}>
       <h2>Login</h2>
       <form className={styles['login-form']} onSubmit={handleLogin}>

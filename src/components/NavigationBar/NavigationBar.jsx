@@ -1,17 +1,18 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import './NavigationBar.module.css';
+
+
 
 function NavigationBar({ username }) {
   return (
     <div className="navbar">
       <div>
-      <ul>
-        <li><NavLink to="/">Home</NavLink>{/* todo */}</li>
-        <li> <NavLink to="/character1">NPC Generator</NavLink> {/* todo */}</li>
-        <li><NavLink to="/DiceRoller">Dice</NavLink>{/* todo */}</li>
-        <li> <NavLink to="/LootGenerator">Gold Generator</NavLink>{/* todo */}</li>
-        <li><NavLink to="/StoryGenerator">Story Generator</NavLink>{/* todo */}</li>
+        <ul>
+       <li> <NavLink to="/">Home</NavLink></li>
+       <li><NavLink to="/character1">NPC Generator</NavLink></li>
+       <li><NavLink to="/DicePage">Dice</NavLink></li>
+       <li> <NavLink to="/LootGenerator">Gold</NavLink></li>
+       <li> <NavLink to="/StoryPage">Story</NavLink></li> 
         </ul>
       </div>
       <div>
