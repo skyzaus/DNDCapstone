@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
-import { CharacterProvider } from "./context/CharacterContext"; // Import the provider
+import { CharacterProvider } from "./context/CharacterContext"; 
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import AppRoute from "./routes/AppRoute";
 import DarkModeSwitch from "./components/DarkModeSwitch/DarkModeSwitch";
