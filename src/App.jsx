@@ -32,7 +32,7 @@ function App() {
                 isAuthenticated={isAuthenticated}
               />
             </header>
-            <main className="app__main">{/* Main content */}</main>
+            <main className="app__main"></main>
             <footer className="app__footer">
               <D20 />
             </footer>

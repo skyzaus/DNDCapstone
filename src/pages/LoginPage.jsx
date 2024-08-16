@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
-import { ThemeContext } from '../context/ThemeContext'; // Import your ThemeContext
+import { ThemeContext } from '../context/ThemeContext'; 
 import styles from './LoginPage.module.css';
 
 const LoginPage = ({ onLogin }) => {
   const [username, setUsername] = useState('');
-  const { isDarkMode } = useContext(ThemeContext); // Access the current theme
+  const { isDarkMode } = useContext(ThemeContext); 
 
   const handleLogin = (e) => {
     e.preventDefault();
