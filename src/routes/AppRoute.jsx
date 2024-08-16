@@ -19,7 +19,7 @@ function AppRoute({ onLogin, isAuthenticated }) {
           <Route path="/" element={<Home />} />
           <Route path="/character1" element={<CharacterPage1 />} />
           <Route path="/DicePage" element={<DiceRoller />} />
-          <Route path="/LootGenerator" element={<LootGenerator />} />
+          <Route path="/LootPage" element={<LootGenerator />} />
           <Route path="/StoryPage" element={<StoryGenerator />} />
           
         </>
