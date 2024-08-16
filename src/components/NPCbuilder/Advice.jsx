@@ -11,7 +11,7 @@ const Advice = () => {
       console.log(res.data.slip.advice);
     }
     loadProfile();
-  }, []);
+  });
 
   return (
     <div className="advice-container">

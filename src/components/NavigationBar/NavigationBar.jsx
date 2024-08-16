@@ -11,7 +11,7 @@ function NavigationBar({ username }) {
        <li> <NavLink to="/">Home</NavLink></li>
        <li><NavLink to="/character1">NPC Generator</NavLink></li>
        <li><NavLink to="/DicePage">Dice</NavLink></li>
-       <li> <NavLink to="/LootGenerator">Gold</NavLink></li>
+       <li> <NavLink to="/lootPage">Gold</NavLink></li>
        <li> <NavLink to="/StoryPage">Story</NavLink></li> 
         </ul>
       </div>

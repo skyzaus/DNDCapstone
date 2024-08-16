@@ -1,10 +1,7 @@
+import React, { useState, useEffect } from 'react';
 
-
-
-import React from 'react';
-
-class RandomQuirk extends React.Component {
-  quirks = [
+const RandomQuirk = () => {
+  const quirks = [
     'Talks to a pet mouse as if it knows the answers to everything.',
     'Believes every dream is a prophecy.',
     'Always sleeps with a weapon in hand.',
@@ -27,17 +24,20 @@ class RandomQuirk extends React.Component {
     'Doesn\'t trust anyone with a beard.'
   ];
 
-  getRandomQuirk() {
-    return this.quirks[Math.floor(Math.random() * this.quirks.length)];
-  }
-  
-  render() {
-    return (
-      <h4>
-        Quirk: {this.getRandomQuirk() ? this.getRandomQuirk() : 'Building Quirk...' }
-      </h4>
-    );
-  }
-}
+  const [quirk, setQuirk] = useState('');
+
+  useEffect(() => {
+    const getRandomQuirk = () => {
+      return quirks[Math.floor(Math.random() * quirks.length)];
+    };
+    setQuirk(getRandomQuirk());
+  }, [quirks]);
+
+  return (
+    <h4>
+      Quirk: {quirk}
+    </h4>
+  );
+};
 
 export default RandomQuirk;

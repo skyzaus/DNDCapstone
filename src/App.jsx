@@ -21,7 +21,7 @@ function App() {
     <ThemeProvider>
       <CharacterProvider>
         {" "}
-        {/* Wrap with CharacterProvider */}
+       
         <BrowserRouter>
           <DarkModeSwitch />
           <div className="app">

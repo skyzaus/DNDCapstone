@@ -6,6 +6,7 @@ import HealthCounter from '../npcBuilder/HealthCounter';
 import AnathemaGenerator from '../npcBuilder/AnathemaGenerator';
 import RandomAccent from '../npcBuilder/RandomAccent';
 import RandomRaceGenerator from '../npcBuilder/RandomRaceGenerator';
+import RandomQuirk from '../NPCbuilder/RandomQuirk';
 
 
 const RandomCharacter = () => {
@@ -51,6 +52,7 @@ const RandomCharacter = () => {
     <div className="Chr">
      
       <h2>Random D&D NPC</h2>
+      <HealthCounter />
       <h4><strong>Name: {character.name}</strong></h4>
       <RandomAccent />
       <RandomRaceGenerator />
@@ -64,7 +66,8 @@ const RandomCharacter = () => {
       <h4>Charisma: {character.charisma}</h4>
       <Advice />
       <AnathemaGenerator />
-      <HealthCounter />
+     
+      <RandomQuirk/>
       <button onClick={generateCharacter}>Generate New Character</button>
     </div>
   );

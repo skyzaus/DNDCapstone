@@ -1,16 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
+const LootGenerator = () => {
+  const [gold, setGold] = useState(0);
+  const [silver, setSilver] = useState(0);
+  const [copper, setCopper] = useState(0);
 
+  const generateLoot = () => {
+    const generatedGold = Math.floor(Math.random() * 100) + 1;
+    const generatedSilver = Math.floor(Math.random() * 100) + 1;
+    const generatedCopper = Math.floor(Math.random() * 100) + 1;
 
-
-function Loot() {
- 
+    setGold(generatedGold);
+    setSilver(generatedSilver);
+    setCopper(generatedCopper);
+  };
 
   return (
     <div>
-      <h1>gold page</h1>
+      <h2>Loot Generator</h2>
+      <div>Gold: {gold}</div>
+      <div>Silver: {silver}</div>
+      <div>Copper: {copper}</div>
+      <button onClick={generateLoot}>Generate Loot</button>
     </div>
   );
-}
+};
 
-export default Loot;
+export default LootGenerator;
