@@ -64,10 +64,10 @@ const RandomCharacter = () => {
       <h4>Intelligence: {character.intelligence}</h4>
       <h4>Wisdom: {character.wisdom}</h4>
       <h4>Charisma: {character.charisma}</h4>
-      <Advice />
-      <AnathemaGenerator />
-     
       <RandomQuirk/>
+      <AnathemaGenerator />
+      <Advice />
+      
       <button onClick={generateCharacter}>Generate New Character</button>
     </div>
   );

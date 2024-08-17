@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import Home from "../pages/Home";
-import CharacterPage1 from "../pages/characterPage1";
+import CharacterPage1 from "../pages/NPCPage1";
 
 import LoginPage from "../pages/LoginPage";
 import DiceRoller from "../pages/DicePage";

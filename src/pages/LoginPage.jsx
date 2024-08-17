@@ -1,15 +1,19 @@
 import React, { useState, useContext } from 'react';
-import { ThemeContext } from '../context/ThemeContext'; 
+import { ThemeContext } from '../context/ThemeContext';
 import styles from './LoginPage.module.css';
 
 const LoginPage = ({ onLogin }) => {
   const [username, setUsername] = useState('');
-  const { isDarkMode } = useContext(ThemeContext); 
+  const [error, setError] = useState(''); 
+  const { isDarkMode } = useContext(ThemeContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
     if (username.trim()) {
       onLogin(username);
+      setError(''); 
+    } else {
+      setError('Username is required Dungeon Master.'); 
     }
   };
 
@@ -23,6 +27,7 @@ const LoginPage = ({ onLogin }) => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+        {error && <p className={styles['error-message']}>{error}</p>} 
         <button type="submit">Login</button>
       </form>
     </div>
