@@ -6,9 +6,9 @@ const LootGenerator = () => {
   const [copper, setCopper] = useState(0);
 
   const generateLoot = () => {
-    const generatedGold = Math.floor(Math.random() * 100) + 1;
-    const generatedSilver = Math.floor(Math.random() * 100) + 1;
-    const generatedCopper = Math.floor(Math.random() * 100) + 1;
+    const generatedGold = Math.floor(Math.random() * 25) + 1;
+    const generatedSilver = Math.floor(Math.random() * 50) + 1;
+    const generatedCopper = Math.floor(Math.random() * 99) + 1;
 
     setGold(generatedGold);
     setSilver(generatedSilver);

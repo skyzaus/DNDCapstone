@@ -16,7 +16,7 @@ function NavigationBar({ username }) {
         </ul>
       </div>
       <div>
-        {username && <span className="welcome-message">Welcome, {username}</span>}
+        {username && <span className="welcome-message">Welcome Dungeon Master {username}</span>}
       </div>
     </div>
   );
