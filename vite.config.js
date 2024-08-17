@@ -5,5 +5,5 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/DNDCapstone/", // Update with your repository name
-  build: { chunkSizeWarningLimit: 1600 },
+  build: { chunkSizeWarningLimit: 3600 },
 });
