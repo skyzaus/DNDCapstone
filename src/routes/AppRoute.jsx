@@ -21,7 +21,6 @@ function AppRoute({ onLogin, isAuthenticated }) {
           <Route path="/DicePage" element={<DiceRoller />} />
           <Route path="/LootPage" element={<LootGenerator />} />
           <Route path="/StoryPage" element={<StoryGenerator />} />
-          
         </>
       )}
       <Route path="*" element={<Navigate to={isAuthenticated ? "/" : "/"} />} />
