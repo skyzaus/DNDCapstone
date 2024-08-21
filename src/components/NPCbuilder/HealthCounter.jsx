@@ -4,20 +4,20 @@ import React, { useState } from 'react';
 function HealthCounter() {
   const [count, setCount] = useState(Math.floor(Math.random() * (15 - 5 + 1)) + 5);
 
-  const add = () => {
-    setCount(countUp=> countUp + 1);
+  const handleAdd = () => {
+    setCount(prevCount => prevCount + 1);
   };
 
-  const subtract = () => {
-    setCount(countDown => countDown - 1);
+  const handleSubtract = () => {
+    setCount(prevCount => prevCount - 1);
   };
 
   return (
     <div className="health-counter-container">
       <p>
-        <button onClick={subtract}>-</button>
+        <button onClick={handleSubtract}>-</button>
         HP: {count}
-        <button onClick={add}>+</button>
+        <button onClick={handleAdd}>+</button>
       </p>
     </div>
   );

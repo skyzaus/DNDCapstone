@@ -6,7 +6,8 @@ import HealthCounter from '../npcBuilder/HealthCounter';
 import AnathemaGenerator from '../npcBuilder/AnathemaGenerator';
 import RandomAccent from '../npcBuilder/RandomAccent';
 import RandomRaceGenerator from '../npcBuilder/RandomRaceGenerator';
-import RandomQuirk from '../NPCbuilder/RandomQuirk';
+import RandomQuirk from '../npcBuilder/RandomQuirk';
+
 
 
 const RandomCharacter = () => {
@@ -49,26 +50,35 @@ const RandomCharacter = () => {
   if (!character) return null;
 
   return (
-    <div className="Chr">
+    <div className="Chr" style={{ 
+      backgroundImage: 'url("https://www.skullsplitterdice.com/cdn/shop/articles/backgrounds_compressed_1200x1200_crop_center.jpg?v=1590088985")',
+      backgroundSize: 'cover',   
+      backgroundPosition: 'center', 
+      backgroundRepeat: 'no-repeat', 
+      height: '70vh', 
+      color: 'gold',  
      
+    }}>
+     
+     <button onClick={generateCharacter}>Generate New Character</button>
       <h2>Random D&D NPC</h2>
       <HealthCounter />
-      <h4><strong>Name: {character.name}</strong></h4>
+      <h2><strong>Name: {character.name}</strong></h2>
       <RandomAccent />
       <RandomRaceGenerator />
-      <h4>Gender: {faker.person.sex()}</h4>
-      <h4>Class: {character.dndClass}</h4>
-      <h4>Strength: {character.strength}</h4>
-      <h4>Dexterity: {character.dexterity}</h4>
-      <h4>Constitution: {character.constitution}</h4>
-      <h4>Intelligence: {character.intelligence}</h4>
-      <h4>Wisdom: {character.wisdom}</h4>
-      <h4>Charisma: {character.charisma}</h4>
+      <h2>Gender: {faker.person.sex()}</h2>
+      <h2>Class: {character.dndClass}</h2>
+      <h2>Strength: {character.strength}</h2>
+      <h2>Dexterity: {character.dexterity}</h2>
+      <h2>Constitution: {character.constitution}</h2>
+      <h2>Intelligence: {character.intelligence}</h2>
+      <h2>Wisdom: {character.wisdom}</h2>
+      <h2>Charisma: {character.charisma}</h2>
       <RandomQuirk/>
       <AnathemaGenerator />
       <Advice />
       
-      <button onClick={generateCharacter}>Generate New Character</button>
+      
     </div>
   );
 };

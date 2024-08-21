@@ -1,68 +1,156 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  font-family: sans-serif;
+  width: 100vw;
   min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: white;
+  color: black;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Dark Mode */
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+/* Buttons, Inputs, Textareas */
+button,
+input,
+textarea {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  color: inherit;
+  border: 2px solid black;
+  background-color: transparent;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: green;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover,
+textarea:hover,
+input:hover {
+  border-color: #6cd265;
+}
+
+textarea {
+  min-height: 12rem;
+}
+
+/* Spacecraft Styles */
+.spacecraft {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 2px solid black;
+}
+
+.spacecraft__imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  margin-bottom: 6rem;
+  cursor: pointer;
+  border: 2px dotted black;
+}
+
+.spacecraft__imageContainer:hover {
+  border-color: #6cd265;
+}
+
+.spacecraft__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spacecraft__infoContainer {
+  display: flex;
+  width: 100%;
+}
+
+.spacecraft__info {
+  font-size: 1.2rem;
+  width: 50%;
+}
+
+.spacecraft__infoText {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Form Styles */
+.form__inputs {
+  padding: 2rem;
+  border: 2px solid black;
+  margin: 2rem 0;
+}
+
+.error {
+  color: #ce3d3d;
+  margin-bottom: 2rem;
+}
+
+/* Planet and Spacecraft Styles */
+.planetWithSpacecrafts,
+.planet,
+.planet__spacecrafts,
+.planet__spacecraft__imageContainer {
+  display: flex;
+}
+
+.planetWithSpacecrafts,
+.planet {
+  border: 2px dotted black;
+  margin-bottom: 1rem;
+}
+
+.planet {
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.planet--selected,
+.planet__spacecraft--selected .planet__spacecraft__imageContainer {
+  border-color: #ce3d3d;
+}
+
+.planet:not(.planet--selected):hover,
+.planet__spacecraft:not(.planet__spacecraft--selected)
+  .planet__spacecraft__imageContainer:hover {
+  border-color: #6cd265;
+}
+
+.planet__imageContainer,
+.planet__spacecraft__imageContainer {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 1rem;
+}
+
+.planet__image,
+.planet__spacecraft__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.planet__spacecrafts {
+  flex-wrap: wrap;
 }

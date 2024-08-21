@@ -7,8 +7,8 @@ const DarkModeSwitch = () => {
 
   return (
     <button className="dark-mode-switch" onClick={toggleTheme}>
-      Switch to {theme === "light" ? "🌙 Dark" : "☀️ Light"} Mode
-    </button>
+  Switch to {theme === "light" ? "🌙 Dark" : "☀️ Light"} Mode
+</button>
   );
 };
 

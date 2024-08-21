@@ -40,7 +40,7 @@ const AnathemaGenerator = () => {
 
   return (
     <div className="anathema-container">
-      <p>Anathema: {anathema}</p>
+      <h2>Anathema: {anathema}</h2>
     </div>
   );
 }

@@ -23,21 +23,22 @@ const RandomQuirk = () => {
     'Talks in rhyme, all the time.',
     'Doesn\'t trust anyone with a beard.'
   ];
+  
+  const getRandomQuirk = () => {
+    return quirks[Math.floor(Math.random() * quirks.length)];
+  }
 
-  const [quirk, setQuirk] = useState('');
+  const [quirk, setQuirk] = useState(getRandomQuirk());
 
   useEffect(() => {
-    const getRandomQuirk = () => {
-      return quirks[Math.floor(Math.random() * quirks.length)];
-    };
     setQuirk(getRandomQuirk());
   }, [quirks]);
 
   return (
-    <h4>
-      Quirk: {quirk}
-    </h4>
+    <h2>
+      Quirk: {quirk ? quirk : 'Building Quirk...' }
+    </h2>
   );
-};
+}
 
 export default RandomQuirk;

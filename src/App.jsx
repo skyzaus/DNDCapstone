@@ -9,7 +9,7 @@ import "./App.css";
 import D20 from "./components/Dice/D20";
 
 function App() {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleLogin = (username) => {
@@ -17,24 +17,35 @@ function App() {
     setIsAuthenticated(true);
   };
 
+  const handleLogout = () => {
+    setUsername(null);
+    setIsAuthenticated(false);
+  };
+
   return (
     <ThemeProvider>
       <CharacterProvider>
-        {" "}
-       
         <BrowserRouter>
-          <DarkModeSwitch />
-          <div className="app">
+          
+          <div className="app" style={{ 
+      backgroundImage: 'url("https://images7.alphacoders.com/133/thumb-1920-1330715.png")',
+      backgroundSize: 'cover',   
+      backgroundPosition: 'center', 
+      backgroundRepeat: 'no-repeat', 
+     
+      color: 'white',  
+     
+    }}>
             <header className="app__header">
-              <NavigationBar username={username} />
-              <AppRoute
-                onLogin={handleLogin}
-                isAuthenticated={isAuthenticated}
-              />
+              <NavigationBar username={username} onLogout={handleLogout} />
+             
             </header>
-            <main className="app__main"></main>
+            <main className="app__main">
+            <AppRoute onLogin={handleLogin} isAuthenticated={isAuthenticated} />
+            </main>
             <footer className="app__footer">
-              <D20 />
+              <D20 username={username} onLogout={handleLogout} />
+              <DarkModeSwitch />
             </footer>
           </div>
         </BrowserRouter>

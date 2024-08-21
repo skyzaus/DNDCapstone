@@ -11,7 +11,7 @@ const RandomRaceGenerator = () => {
     setRace(getRandomRace())
    },[races]
 )
-return <h4>Race: <strong>{race}</strong></h4>;
+return <h2>Race: <strong>{race}</strong></h2>;
 
 
 }

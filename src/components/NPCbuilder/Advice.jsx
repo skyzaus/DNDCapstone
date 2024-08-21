@@ -11,11 +11,11 @@ const Advice = () => {
       console.log(res.data.slip.advice);
     }
     loadProfile();
-  });
+  }, );
 
   return (
     <div className="advice-container">
-      <h4>Advice: {data ? data : 'Thinking...'}</h4>
+      <h1>Advice: {data ? data : 'Thinking...'}</h1>
     </div>
   );
 };

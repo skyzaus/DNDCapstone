@@ -21,7 +21,17 @@ function Dice() {
   const { roll, rollDice, lastDice } = useDiceRoll();
 
   return (
-    <div>
+    <div style={{ 
+      backgroundImage: 'url("https://i.redd.it/nuc761buze561.jpg")',
+      backgroundSize: 'cover',   
+      backgroundPosition: 'center', 
+      backgroundRepeat: 'no-repeat', 
+      height: '70vh',
+      color: 'gold', 
+     
+    }}>
+      
+      <h1>Roll the Dice!</h1>
       <button onClick={() => rollDice(-1)}>
         Reset Roll
       </button>
@@ -33,7 +43,7 @@ function Dice() {
       <button onClick={() => rollDice(10)} className="dice d10">D10</button>
       <button onClick={() => rollDice(12)} className="dice d12">D12</button>
       <button onClick={() => rollDice(20)} className="dice d20">D20</button>
-      <p>D{lastDice} Rolled a {roll}</p>
+      <h2>D{lastDice} Rolled a {roll}</h2>
     </div>
   );
 }

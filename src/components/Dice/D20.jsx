@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-const D20 = () => {
-  const [randomNumber, setRandomNumber] = useState(
-    Math.floor(Math.random() * 20) + 1
-  );
+const D20 = ({ username, onLogout }) => {
+  const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * 20) + 1);
   const [timeLeft, setTimeLeft] = useState(30);
 
   useEffect(() => {
@@ -27,13 +25,20 @@ const D20 = () => {
   }, [timeLeft]);
 
   return (
-    <div className="D20">
-      <div className="navbar">
-        <h3>
-          D20 roll: {randomNumber} (Next roll in {timeLeft}s)
-        </h3>
-      </div>
+   <>
+   <div className='D20'>
+      <h3>D20 roll every 30 seconds: {randomNumber} (Next roll in {timeLeft}s)</h3>
+      {username ? (
+        <div>
+          <span className="welcome-message">Welcome, {username}</span>
+          <button onClick={onLogout} className="logout-button">Logout</button>
+        </div>
+      ) : (
+        <span className="welcome-message">You are not logged in</span>
+      )}
     </div>
+   
+    </>
   );
 };
 
